@@ -106,10 +106,25 @@ $(function(){
 $(function(){
     $("#flag_right img").click(function(){
         $(".exp_list").stop(true,false);
-        $(".exp_list").animate({right:900},2000,"easeInOutCubic");
+        $(".exp_list").animate({right:900},1000,"easeInOutCubic");
     });
     $("#flag_left img").click(function(){
         $(".exp_list").stop(true,false);
-        $(".exp_list").animate({right:0},2000,"easeInOutCubic");
+        $(".exp_list").animate({right:0},1000,"easeInOutCubic");
     });
+});
+$(".skill_list_icon").click(function(){
+   $(".skill_int").each(function(){
+       if($(this).is(":visible")){
+           $(this).slideUp(200);
+           $(this).prev().removeClass("skill_flag_rotate");
+       }
+   });
+   if($(this).siblings(".skill_int").is(":hidden")){
+       $(this).siblings(".skill_int").slideDown(400);
+       $(this).siblings(".skill_flag").addClass("skill_flag_rotate");
+   } else {
+       $(this).siblings(".skill_int").slideUp(200);
+       $(this).siblings(".skill_flag").removeClass("skill_flag_rotate");
+   }
 });

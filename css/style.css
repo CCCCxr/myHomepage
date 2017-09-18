@@ -351,6 +351,7 @@ nav li a:hover:after {
     background: url("../images/skill_flag.png") no-repeat top center;
     width: 20px;
     height: 20px;
+    transition-duration: 1s;
 }
 .skill_int{
     position: absolute;
@@ -361,10 +362,14 @@ nav li a:hover:after {
     line-height: 20px;
     background: #c8c8dc;
     left: -40px;
+    display: none;
 }
 .skill_scale{
     animation: scaling 1s ;
     visibility: visible;
+}
+.skill_flag_rotate{
+    transform: rotate(180deg);
 }
 
 /*  skill end  */
